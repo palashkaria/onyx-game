@@ -2,17 +2,17 @@
 
 set -e
 
-mkdir -p onoff
-postcss styles.css > onoff/styles.css
+mkdir -p dist
+postcss styles.css > dist/styles.css
 html-minifier \
   --collapse-whitespace \
   --remove-comments \
   --remove-attribute-quotes \
   --remove-optional-tags \
   --remove-tag-whitespace \
-  index.html > onoff/index.html
-rollup -f es index.js | uglifyjs -cm --toplevel > onoff/index.js
-zip onoff.zip onoff/*
-rm onoff/*
-unzip onoff.zip
-ls -lh onoff.zip
+  index.html > dist/index.html
+rollup -f es index.js | uglifyjs -cm --toplevel > dist/index.js
+zip dist.zip dist/*
+rm dist/*
+unzip dist.zip
+ls -lh dist.zip
