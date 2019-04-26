@@ -65,34 +65,27 @@ svg {
 .left #onyx-warp {
   transform: scale(-1, 1);
 }
-
+#Tail1, #Tail2 {
+  transition: 0.2s ease all;
+}
 #Tail1 {
   opacity: 0;
-  animation: fade-in 0.2s infinite;
+  animation: fade-in 0.3s infinite;
 }
 
 #Tail2 {
   opacity: 1;
-  animation: fade-out 0.2s infinite;
+  animation: fade-out 0.3s infinite;
 }
 
-.walk #Leg_F1,
-.walk #Leg_F2,
 .walk #Leg_B1,
+.walk #Leg_F1 {
+  animation: walk-B1 0.3s infinite;
+}
+
+.walk #Leg_F2,
 .walk #Leg_B2 {
-  animation: walk-animation 0.2s infinite;
-}
-
-.walk #Leg_F2 {
-  animation: walk-F1 0.2s infinite;
-}
-
-.walk #Leg_B1 {
-  animation: walk-B1 0.2s infinite;
-}
-
-.walk #Leg_B2 {
-  animation: walk-B2 0.2s infinite;
+  animation: walk-B2 0.3s infinite;
 }
 
 .walk #head {
@@ -201,13 +194,14 @@ svg {
   }
 }
 @keyframes walk-B1 {
-  50% {
-    transform: translateY(-1px) rotate(2deg);
+  0% {
+    transform: translateY(-2px);
   }
 }
+
 @keyframes walk-B2 {
   50% {
-    transform: translateY(-1px) rotate(2deg);
+    transform: translateY(-2px)
   }
 }
 
