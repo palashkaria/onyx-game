@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-  background: #e5e5e5;
+  background: #333333;
   align-items: center;
   display: flex;
   line-height: 1.4;
@@ -32,7 +32,7 @@ svg {
 /*  Title  */
 
 .menu .text {
-  opacity: 0.1;
+  opacity: 0.3;
 }
 
 .menu .selected .text {
@@ -52,7 +52,7 @@ svg {
 /*  HUD  */
 
 #hud {
-  opacity: 0.1;
+  opacity: 0.4;
 }
 
 
@@ -169,8 +169,14 @@ svg {
 }
 
 .on .dark, .off .light {
-  opacity: 0.1;
+  opacity: 0.4;
 }
+
+
+ .off rect.light {
+  opacity: 0.2;
+}
+
 
 
 
